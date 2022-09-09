@@ -1,10 +1,10 @@
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
-  region = "us-east-2"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "exit-node" {
-  ami           = "ami-0f65671a86f061fcd"
+  ami           = "ami-0729e439b6769d6ab"
   instance_type = "t2.micro"
   key_name      = "proxycannon"
   vpc_security_group_ids = ["${aws_security_group.exit-node-sec-group.id}"]
